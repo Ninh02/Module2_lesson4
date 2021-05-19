@@ -13,11 +13,6 @@ class EmployeeManager{
     }
     public function delete($employee): array
     {
-        for($i=0;$i<count($this->employees);$i++){
-            if($this->employees[$i]==$employee){
-                array_splice($this->employees,$this->employees[$i-1],1);
-            }
-        }
-        print_r($this->employees);
+        unset($this->employees[$employee]);
     }
 }
